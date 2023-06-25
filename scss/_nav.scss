@@ -1,0 +1,90 @@
+// MOBILE FIRST
+
+// INICIA OFFCANVAS
+
+.offcanvas-body{
+    font-size: 1.10rem;
+    background-color: $mainColor;
+    color: $white;
+}
+
+.offcanvas-header{
+    display: flex;
+    justify-content: space-around;
+    background-color:$mainColor;
+
+        img{
+            margin-left: 30%;
+            object-fit: cover;
+            width: 30%;
+        }
+}
+
+// DROPDOWN DEL OFFCANVAS
+.dropdown {
+
+    ul{
+        background-color: $DarkBlue;
+
+            li{
+                a{
+                    font-size: 1.10rem;
+                    color: $white;
+                }
+            }
+    }
+
+    button{
+        font-size: 1.10rem;
+        background-color: $mainColor;
+        border: none;
+    }
+}
+
+// BOTON CIERRE
+.botonCierre {
+
+    button{
+        background-color: $white;
+    }
+}
+
+.titleRedes{
+    margin-top: 20%;
+    margin-left: 4%;
+    font-size: 1.1rem;
+}
+
+.container-redesCanvas {
+
+        a{
+            list-style: none;
+            text-decoration: none;
+            margin-left: 3%;
+        }
+}
+
+// NAV GENERAL
+
+nav{
+    padding: 1% 0%;
+    display: flex;
+    justify-content: space-around;
+    background-color:$mainColor;
+}
+
+.navbarLogo{
+
+        a{
+            img{
+                object-fit: cover;
+                width: 25%;
+                margin-left: 25%;
+            }
+        }
+}
+
+// MENU PARA DESKTOP
+.dropDesk{
+    display: none;
+}

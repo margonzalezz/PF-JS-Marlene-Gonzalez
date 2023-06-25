@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+* {
+  font-family: "Lato", sans-serif;
+}
+
+.selectViaje {
+  background-color: #b6ced4;
+  padding: 2% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.selectViaje label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.selectViaje .seleccionTipoPasaje {
+  display: flex;
+  justify-content: center;
+}
+.selectViaje .seleccionTipoPasaje button {
+  background-color: #06657c;
+  color: white;
+  border: none;
+}
+.selectViaje .seleccionTipoPasaje .selectIda, .selectViaje .seleccionTipoPasaje .select-idaYvuelta {
+  background-color: #06657c;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: white;
+  margin-right: 1%;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+.selectViaje .seleccionTipoPasaje .selectIda input[type=radio i], .selectViaje .seleccionTipoPasaje .select-idaYvuelta input[type=radio i] {
+  margin-right: 10px;
+}
+.selectViaje .seleccionTipoPasaje .selectIda:hover, .selectViaje .seleccionTipoPasaje .select-idaYvuelta:hover {
+  background-color: #013744;
+}
+.selectViaje .seleccionTipoPasaje .selectIda:hover button:hover, .selectViaje .seleccionTipoPasaje .select-idaYvuelta:hover button:hover {
+  background-color: #013744;
+}
+.selectOrigen label::before {
+  content: url(../img/icon/despegue.png);
+}
+
+.selectDestino label::after {
+  content: url(../img/icon/aterrizaje.png);
+}
+
+.selectPasajeros label::before {
+  content: url(../img/icon/asiento.png);
+}
+
+.buscarVuelos {
+  cursor: pointer;
+}
+.buscarVuelos button {
+  border: none;
+  border-radius: 20px;
+  background-color: #06657c;
+  color: white;
+  padding: 3%;
+  font-weight: bold;
+  width: 100%;
+}
+.buscarVuelos button:hover {
+  background-color: #013744;
+}
+
+.form-error {
+  display: none;
+}
+
+.text-principal h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 10%;
+}
+.text-principal p {
+  padding: 0% 5%;
+}
+
+.img-turismo {
+  overflow: hidden;
+  padding-left: 4%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+.img-turismo img {
+  cursor: pointer;
+  padding-right: 5%;
+  transform: 2s;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container-trip figure {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.container-trip figure:hover > .hover {
+  opacity: 0.7;
+  visibility: visible;
+}
+.container-trip figure:hover > img {
+  transform: scale(1.1);
+}
+
+.hover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(82, 82, 82, 0.8784313725);
+  transition: all 400ms ease-out;
+  opacity: 1;
+  visibility: hidden;
+}
+
+footer {
+  background-color: #69adbe;
+}
+
+.accordion-header .accordion-drop {
+  background-color: #69adbe;
+  color: white;
+}
+.accordion-header .accordion-button:not(.collapsed) {
+  background-color: #013744;
+  color: white;
+}
+
+.accordText {
+  background-color: #06657c;
+}
+.accordText ul {
+  list-style: none;
+}
+.accordText ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+  height: 80px;
+  margin-bottom: 5px;
+}
+.newsletter h3 {
+  font-size: 1rem;
+}
+.newsletter input {
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+}
+
+.footerDesktop {
+  display: none;
+}
+
+#grid-pasajes {
+  display: grid;
+  grid-template-areas: "logo dias" "ida vuelta" "precio seleccion";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 2.7fr 2fr;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  background-color: #06657c;
+  color: white;
+}
+#grid-pasajes:hover {
+  transition: 0.5s ease-in;
+  box-shadow: 2px 10px 60px rgb(1, 55, 68);
+}
+
+.logo {
+  grid-area: logo;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #b6ced4;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+.logo span {
+  font-size: 0.8rem;
+  margin-right: 5%;
+}
+
+.dias {
+  grid-area: dias;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #b6ced4;
+  padding-left: 30%;
+  padding-top: 15%;
+}
+
+.ida {
+  grid-area: ida;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #b6ced4;
+  padding-left: 15%;
+  padding-top: 5%;
+}
+
+.vuelta {
+  grid-area: vuelta;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: #b6ced4;
+  padding-left: 15%;
+  padding-top: 5%;
+}
+
+#container-precio {
+  grid-area: precio;
+  padding-left: 15%;
+  padding-top: 5%;
+}
+
+.seleccionar-pasaje {
+  grid-area: seleccion;
+  padding-left: 10%;
+  padding-top: 15%;
+}
+.seleccionar-pasaje button {
+  border: none;
+  color: white;
+  background-color: #013744;
+  border-radius: 5px;
+  padding: 4% 3%;
+}
+.seleccionar-pasaje button:hover {
+  background-color: #69adbe;
+}
+
+.offcanvas-body {
+  font-size: 1.1rem;
+  background-color: #69adbe;
+  color: white;
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #69adbe;
+}
+.offcanvas-header img {
+  margin-left: 30%;
+  object-fit: cover;
+  width: 30%;
+}
+
+.dropdown ul {
+  background-color: #06657c;
+}
+.dropdown ul li a {
+  font-size: 1.1rem;
+  color: white;
+}
+.dropdown button {
+  font-size: 1.1rem;
+  background-color: #69adbe;
+  border: none;
+}
+
+.botonCierre button {
+  background-color: white;
+}
+
+.titleRedes {
+  margin-top: 20%;
+  margin-left: 4%;
+  font-size: 1.1rem;
+}
+
+.container-redesCanvas a {
+  list-style: none;
+  text-decoration: none;
+  margin-left: 3%;
+}
+
+nav {
+  padding: 1% 0%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #69adbe;
+}
+
+.navbarLogo a img {
+  object-fit: cover;
+  width: 25%;
+  margin-left: 25%;
+}
+
+.dropDesk {
+  display: none;
+}
+
+@media (width > 1024px) {
+  nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+  /* CANVAS */
+  .canvasContainer {
+    display: none;
+  }
+  /* DROPDOWNS PARA DESKTOP */
+  .dropDesk {
+    display: flex;
+    align-items: center;
+  }
+  /* Dropdown Button */
+  .dropbtn {
+    display: flex;
+    background-color: #69adbe;
+    color: white;
+    padding: 16px;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+  }
+  /* ICONO DEL DROP */
+  .dropbtn::after {
+    margin-left: 10px;
+    content: url(../img/icon/chevron-abajo.png);
+  }
+  /* CONTENEDOR DE CADA DROPDOWN */
+  .box-drop {
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  .box-drop:hover .dropdown-body {
+    display: block;
+  }
+  .box-drop:hover .dropbtn {
+    background-color: #013744;
+  }
+  /* INTERIOR DE CADA DROP */
+  .dropdown-body {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #69adbe;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-body a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 17vw;
+  }
+  .dropdown-body a:hover {
+    background-color: #013744;
+  }
+  /* BOTONERA MENU DESKTOP SIN DROP */
+  .trip-menu a {
+    text-decoration: none;
+  }
+  .trip-menu button {
+    background-color: #69adbe;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 19px;
+    margin-left: 20px;
+    font-size: 1.25rem;
+  }
+  .trip-menu button:hover {
+    background-color: #013744;
+  }
+  /* SELECCION PARA BUSCAR VUELOS INDEX */
+  .selectViaje {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+  .selectViaje .seleccionTipoPasaje {
+    margin-top: 7%;
+    display: flex;
+    align-items: center;
+  }
+  .selectViaje .seleccionTipoPasaje .selectIda, .selectViaje .seleccionTipoPasaje .select-idaYvuelta {
+    align-items: center;
+    object-fit: cover;
+    height: 6vh;
+    font-weight: bold;
+  }
+  #grid-pasajes {
+    display: grid;
+    grid-template-areas: "logo ida vuelta dias precio seleccion";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr 1fr;
+    width: 70%;
+    height: 100%;
+    margin-left: 15%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    background-color: #06657c;
+    color: white;
+  }
+  .logo {
+    grid-area: logo;
+    padding-left: 10%;
+    padding-top: 5%;
+    border-width: 2px;
+  }
+  .logo span {
+    font-size: 1rem;
+    margin-right: 5%;
+  }
+  .dias {
+    grid-area: dias;
+    padding-left: 30%;
+    padding-top: 15%;
+    border-width: 2px;
+  }
+  .ida {
+    grid-area: ida;
+    padding-left: 15%;
+    padding-top: 5%;
+    border-width: 2px;
+  }
+  .vuelta {
+    grid-area: vuelta;
+    padding-left: 15%;
+    padding-top: 5%;
+    border-width: 2px;
+  }
+  #container-precio {
+    grid-area: precio;
+    padding-left: 15%;
+    padding-top: 4%;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #b6ced4;
+  }
+  .seleccionar-pasaje {
+    grid-area: seleccion;
+    padding-left: 10%;
+    padding-top: 15%;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #b6ced4;
+  }
+  .seleccionar-pasaje button {
+    border: none;
+    color: white;
+    background-color: #013744;
+    border-radius: 5px;
+    padding: 4% 3%;
+  }
+  .seleccionar-pasaje button:hover {
+    background-color: #69adbe;
+  }
+  .text-principal h1 {
+    font-size: 2.5rem;
+    margin-top: 5%;
+  }
+  .text-principal p {
+    font-size: 1.3rem;
+  }
+  .img-turismo {
+    padding-left: 1.2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+  }
+  .footerMobile {
+    display: none;
+  }
+  .footerDesktop {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .footerDesktop .box-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  .footerDesktop .box-footer h3 {
+    color: white;
+    font-weight: bold;
+  }
+  .footerDesktop .box-footer ul {
+    padding-left: 0;
+  }
+  .footerDesktop .box-footer ul li {
+    list-style: none;
+  }
+  .footerDesktop .box-footer ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .footerDesktop .box-footer input {
+    height: 25%;
+    width: 70%;
+    border: none;
+    border-radius: 8px;
+  }
+  .footerDesktop .footer-redes {
+    display: flex;
+  }
+  .footerDesktop .footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

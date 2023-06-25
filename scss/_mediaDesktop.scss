@@ -1,0 +1,321 @@
+// MEDIA QUERY PARA DESKTOP
+@media (width > 1024px ){
+    nav{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+/* CANVAS */
+.canvasContainer {
+    display: none;
+}
+
+/* DROPDOWNS PARA DESKTOP */
+    .dropDesk{
+        display: flex;
+        align-items: center;
+    }
+
+/* Dropdown Button */
+    .dropbtn {
+        display: flex;
+        background-color: #69adbe;
+        color: white;
+        padding: 16px;
+        font-size: 1.25rem;
+        border: none;
+        border-radius: 5px;
+    }
+
+/* ICONO DEL DROP */
+    .dropbtn::after {
+        margin-left: 10px;
+        content: url(../img/icon/chevron-abajo.png);
+    }
+
+/* CONTENEDOR DE CADA DROPDOWN */
+    .box-drop {
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+
+        &:hover{
+            .dropdown-body{
+                display: block;
+            }
+            .dropbtn{
+                background-color: $darkestBlue;
+            }
+        }
+    }
+
+/* INTERIOR DE CADA DROP */
+  .dropdown-body {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: $mainColor;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    z-index: 1;
+
+            // LINKS DE CADA DROP
+                a {
+                    color: $white;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    width: 17vw;
+
+                    &:hover{
+                        background-color: $darkestBlue;
+                    }
+                }
+  }
+
+  /* BOTONERA MENU DESKTOP SIN DROP */
+
+  .trip-menu{
+            a{
+                text-decoration: none;
+            }
+            button{
+                background-color: $mainColor;
+                color: $white;
+                border: none;
+                border-radius: 10px;
+                padding: 19px;
+                margin-left: 20px;
+                font-size: 1.25rem;
+
+            &:hover{
+                background-color: $darkestBlue;
+            }    
+            }
+  }
+
+/* SELECCION PARA BUSCAR VUELOS INDEX */
+    .selectViaje{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+
+            .seleccionTipoPasaje{
+                margin-top: 7%;
+                display: flex;
+                align-items: center;
+
+
+                 .selectIda{
+                    align-items: center;
+                    object-fit: cover;
+                    height: 6vh;
+                    font-weight: bold;
+
+                }               
+            }
+
+    }
+
+
+    #grid-pasajes {
+        display: grid;
+        grid-template-areas: 
+          "logo ida vuelta dias precio seleccion";
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr 1fr;
+        width: 70%;
+        height: 100%;
+        margin-left: 15%;
+        margin-top: 4%;
+        margin-bottom: 2%;
+        background-color: $DarkBlue;
+        color: $white;
+      }
+
+      .logo {
+        grid-area: logo;
+        padding-left: 10%;
+        padding-top: 5%;
+        border-width: 2px;
+
+    
+        span{
+            font-size: 1rem;
+            margin-right: 5%;
+        }
+      }
+      
+      .dias {
+        grid-area: dias;
+        padding-left: 30%;
+        padding-top: 15%;
+        border-width: 2px;
+
+      }
+      
+      .ida {
+        grid-area: ida;
+        padding-left: 15%;
+        padding-top: 5%;
+        border-width: 2px;
+
+      }
+      
+      .vuelta {
+        grid-area: vuelta;
+        padding-left: 15%;
+        padding-top: 5%;
+        border-width: 2px;
+
+      }
+      
+      #container-precio {
+        grid-area: precio;
+        padding-left: 15%;
+        padding-top: 4%;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: $lightBlue;
+      }
+      
+      .seleccionar-pasaje {
+        grid-area: seleccion;
+        padding-left: 10%;
+        padding-top: 15%;
+        border-bottom: solid;
+        border-width: 2px;
+        border-color: $lightBlue;
+      
+        button {
+          border: none;
+          color: $white;
+          background-color: $darkestBlue;
+          border-radius: 5px;
+          padding: 4% 3%;
+      
+          &:hover {
+            background-color: $mainColor;
+          }
+        }
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // TITULO DEL INDEX
+    .text-principal{
+        h1{
+            font-size: 2.5rem;
+            margin-top: 5%;
+        }
+        p{
+            font-size: 1.3rem;
+        }
+    }
+
+
+    // IMAGENES DEL INDEX
+    .img-turismo{
+        padding-left: 1.2%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+    }
+
+    .footerMobile{
+        display: none;
+    }
+
+
+.footerDesktop{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+
+            .box-footer{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                margin-left: 20px;
+
+                h3{
+                    color:$white;
+                    font-weight: bold;
+                }
+                ul{
+                    padding-left: 0;
+
+                    li{
+                        list-style: none;
+
+                        a{
+                            text-decoration: none;
+                            color: $white;
+                        }
+                    }
+                }
+                input{
+                    height: 25%;
+                    width: 70%;
+                    border: none;
+                    border-radius: 8px;
+                }
+            }
+            .footer-redes{
+                display: flex;
+            }
+            .footer-newsletter{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+// TERMINA EL MEDIA QUERY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
