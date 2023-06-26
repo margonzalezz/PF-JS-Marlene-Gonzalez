@@ -126,6 +126,46 @@
   visibility: hidden;
 }
 
+.steps-fly {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 9% 0%;
+  box-sizing: border-box;
+}
+
+.pasos {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  background-color: #b6ced4;
+  color: white;
+}
+.pasos .box-fly {
+  width: 45%;
+  margin-top: 10%;
+}
+.pasos .box-fly h3 {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+.pasos .box-fly p {
+  font-size: 0.7rem;
+}
+
+.equipaje {
+  margin-left: 50%;
+}
+
+.checkin {
+  margin-left: 50%;
+}
+
+.saludo {
+  margin-left: 50%;
+}
+
 footer {
   background-color: #69adbe;
 }

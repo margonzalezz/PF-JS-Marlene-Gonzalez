@@ -145,7 +145,45 @@
     }
 
 
+.steps-fly{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 9% 0%;
+    box-sizing: border-box;
 
+}
+
+.pasos{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    background-color: $lightBlue;
+    color: $white;
+
+    .box-fly{
+        width: 45%;
+        margin-top: 10%;
+
+        h3{
+            font-size: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        p{
+            font-size: 0.7rem;
+        }
+    }
+}
+.equipaje{
+    margin-left: 50%;
+}
+.checkin{
+    margin-left: 50%;
+}
+.saludo{
+    margin-left: 50%;
+}
 
 
 
