@@ -148,6 +148,7 @@
   margin-top: 10%;
   text-align: center;
   display: flex;
+  padding-left: 5%;
 }
 .pasos .box-fly .text-steps {
   width: 50%;
@@ -167,8 +168,30 @@
   font-size: 0.7rem;
   font-weight: bold;
 }
-.pasos .box-fly .img-steps {
+.pasos .box-fly .img-steps-right {
   margin-left: 10%;
+}
+.pasos .box-fly .img-steps-left {
+  margin-right: 10%;
+}
+
+.doc-important h1 {
+  text-align: center;
+  background-color: #013744;
+  color: white;
+}
+.doc-important p {
+  padding: 0 5%;
+}
+.doc-important h2 {
+  text-align: center;
+  background-color: #013744;
+  color: white;
+  font-size: 1.3rem;
+}
+.doc-important .vuelos-doc {
+  color: #06657c;
+  font-weight: bold;
 }
 
 footer {
@@ -521,6 +544,9 @@ nav {
   .seleccionar-pasaje button:hover {
     background-color: #69adbe;
   }
+  .text-principal {
+    margin-bottom: 5%;
+  }
   .text-principal h1 {
     font-size: 2.5rem;
     margin-top: 5%;
@@ -533,6 +559,23 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
+  }
+  .steps-fly {
+    font-size: 1.8rem;
+    margin: 7% 0;
+  }
+  .pasos {
+    padding: 5% 15%;
+  }
+  .pasos .box-fly .text-steps h3 {
+    font-size: 1.8rem;
+  }
+  .pasos .box-fly .text-steps p {
+    font-size: 1.3rem;
+  }
+  .doc-important {
+    padding: 0 15%;
+    margin-top: 5%;
   }
   .footerMobile {
     display: none;

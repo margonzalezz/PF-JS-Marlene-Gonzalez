@@ -145,7 +145,7 @@
     }
 
 
-.steps-fly{
+.steps-fly{         //titulo de la section con animaciones 
     text-align: center;
     font-weight: bold;
     font-size: 1.3rem;
@@ -155,7 +155,7 @@
 
 }
 
-.pasos{
+.pasos{             //contenedor de la section
     display: flex;
     flex-direction: column;
     background-color: $lightBlue;
@@ -168,6 +168,7 @@
         margin-top: 10%;
         text-align: center;
         display: flex;
+        padding-left: 5%;
 
         .text-steps{
             width: 50%;
@@ -187,18 +188,36 @@
                     font-weight: bold;
                 }
         }
-        .img-steps{
+        .img-steps-right{
             margin-left: 10%;
+        }
+        .img-steps-left{
+            margin-right: 10%;
         }
     }
 }
 
-// .selectDestino label::after {
-//     content: url(../img/icon/aterrizaje.png);
-// }
+.doc-important{
 
-
-
+    h1{
+        text-align: center;
+        background-color: $darkestBlue;
+        color: $white;
+    }
+    p{
+        padding: 0 5%;
+    }
+    h2{
+        text-align: center;
+        background-color: $darkestBlue;
+        color: $white;
+        font-size: 1.3rem;
+    }
+    .vuelos-doc{
+        color: $DarkBlue;
+        font-weight: bold;
+    }
+}
 
 
 
