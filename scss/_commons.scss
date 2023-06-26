@@ -158,34 +158,44 @@
 .pasos{
     display: flex;
     flex-direction: column;
-    padding: 5%;
     background-color: $lightBlue;
     color: $white;
+    overflow: hidden;
+    padding-bottom: 15%;
 
     .box-fly{
-        width: 45%;
+        width: 100%;
         margin-top: 10%;
+        text-align: center;
+        display: flex;
 
-        h3{
-            font-size: 1rem;
-            text-align: center;
-            font-weight: bold;
+        .text-steps{
+            width: 50%;
+                h3{
+                    font-size: 1rem;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                p{
+                    font-size: 0.7rem;
+                    margin-bottom: 0;
+                }
+                a{
+                    text-decoration: none;
+                    color: $DarkBlue;
+                    font-size: 0.7rem;
+                    font-weight: bold;
+                }
         }
-        p{
-            font-size: 0.7rem;
+        .img-steps{
+            margin-left: 10%;
         }
     }
 }
-.equipaje{
-    margin-left: 50%;
-}
-.checkin{
-    margin-left: 50%;
-}
-.saludo{
-    margin-left: 50%;
-}
 
+// .selectDestino label::after {
+//     content: url(../img/icon/aterrizaje.png);
+// }
 
 
 
