@@ -165,7 +165,7 @@
 .pasos .box-fly .text-steps a {
   text-decoration: none;
   color: #06657c;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 .pasos .box-fly .img-steps-right {
@@ -565,7 +565,7 @@ nav {
     margin: 7% 0;
   }
   .pasos {
-    padding: 5% 15%;
+    padding-left: 15%;
   }
   .pasos .box-fly .text-steps h3 {
     font-size: 1.8rem;
