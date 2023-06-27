@@ -219,14 +219,93 @@
     }
 }
 
+//PAGINA DE CHECKOUT
+header{
+    h1{
+        background-color: $DarkBlue;
+        text-align: center;
+        color: $white;
+        padding: 5% 0%;
+    }
+}
 
+.medios-pago{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 5%;
+    margin-left: 5%;
 
+        .box-pago{
+            border: solid;
+            border-width: 0.3px;
+            border-color: #c5c5c5;
+            display: flex;
+            align-items: center;
+            margin-top: 2%;
+            border-radius: 5px;
 
+                .input-text-pago{
+                    display: flex;
+                    align-items: baseline;
 
+                    h3{
+                        font-weight: bold;
+                        margin-left: 2%;
+                        font-size: 1rem;
+                    }
+                }
+                p{
+                    font-size: 0.8rem;
+                }
 
+            &:hover{
+                transition: .5s ease-in;
+                box-shadow: 2px 10px 10px rgb(1, 55, 68);  
+                background-color: $lightBlue;
+            }
+        }
+        .resumen{
+            border: solid;
+            border-radius: 7px;
+            border-color: #c5c5c5;
+            border-width: 0.3px;
+            margin-top: 5%;
 
+                h3{
+                    font-weight: bold;
+                    text-align: center;
+                }
+        }
 
+        .compra{
+            button{
+                margin-top: 10%;
+                background-color: $mainColor;
+                color: $white;
+                font-weight: bold;
+                border: none;
+                border-radius: 7px;
+                width: 70%;
+                padding: 2%;
+                margin-left: 15%;
 
+                &:hover{
+                    background-color: $DarkBlue;
+                }
+            }
+        }
+}
+
+   .efectivo-content{
+       margin-top: 2%;
+   }
+   .transfer-content{
+        margin-top: 3%;
+   }
+   .debit-content{
+    margin-top: 3%;
+   }
 
 
 // FOOTER

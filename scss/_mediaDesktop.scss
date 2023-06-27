@@ -247,18 +247,33 @@
         margin-top: 5%;
     }
 
+    //PAGINA DE CHECKOUT
+    header{
+        h1{
+            padding: 1% 0%;
+        }
+    }
+
+    .medios-pago{
+        width: 60%;
+        margin-left: 20%;
+
+        .box-pago{
+
+            .input-text-pago{
+                h3{
+                    font-size: 1.5rem;
+                }
+            }
+            p{
+                font-size: 1rem;
+                padding-left: 4%;
+            }
+        }
+    }
 
 
-
-
-
-
-
-
-
-
-
-
+//------FOOTER-------------------------------
     .footerMobile{
         display: none;
     }

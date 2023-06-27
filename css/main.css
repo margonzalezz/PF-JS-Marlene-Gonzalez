@@ -194,6 +194,84 @@
   font-weight: bold;
 }
 
+header h1 {
+  background-color: #06657c;
+  text-align: center;
+  color: white;
+  padding: 5% 0%;
+}
+
+.medios-pago {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+.medios-pago .box-pago {
+  border: solid;
+  border-width: 0.3px;
+  border-color: #c5c5c5;
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+  border-radius: 5px;
+}
+.medios-pago .box-pago .input-text-pago {
+  display: flex;
+  align-items: baseline;
+}
+.medios-pago .box-pago .input-text-pago h3 {
+  font-weight: bold;
+  margin-left: 2%;
+  font-size: 1rem;
+}
+.medios-pago .box-pago p {
+  font-size: 0.8rem;
+}
+.medios-pago .box-pago:hover {
+  transition: 0.5s ease-in;
+  box-shadow: 2px 10px 10px rgb(1, 55, 68);
+  background-color: #b6ced4;
+}
+.medios-pago .resumen {
+  border: solid;
+  border-radius: 7px;
+  border-color: #c5c5c5;
+  border-width: 0.3px;
+  margin-top: 5%;
+}
+.medios-pago .resumen h3 {
+  font-weight: bold;
+  text-align: center;
+}
+.medios-pago .compra button {
+  margin-top: 10%;
+  background-color: #69adbe;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 7px;
+  width: 70%;
+  padding: 2%;
+  margin-left: 15%;
+}
+.medios-pago .compra button:hover {
+  background-color: #06657c;
+}
+
+.efectivo-content {
+  margin-top: 2%;
+}
+
+.transfer-content {
+  margin-top: 3%;
+}
+
+.debit-content {
+  margin-top: 3%;
+}
+
 footer {
   background-color: #69adbe;
 }
@@ -576,6 +654,20 @@ nav {
   .doc-important {
     padding: 0 15%;
     margin-top: 5%;
+  }
+  header h1 {
+    padding: 1% 0%;
+  }
+  .medios-pago {
+    width: 60%;
+    margin-left: 20%;
+  }
+  .medios-pago .box-pago .input-text-pago h3 {
+    font-size: 1.5rem;
+  }
+  .medios-pago .box-pago p {
+    font-size: 1rem;
+    padding-left: 4%;
   }
   .footerMobile {
     display: none;
