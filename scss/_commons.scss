@@ -244,6 +244,7 @@ header{
             align-items: center;
             margin-top: 2%;
             border-radius: 5px;
+            cursor: pointer;
 
                 .input-text-pago{
                     display: flex;
@@ -259,7 +260,8 @@ header{
                     font-size: 0.8rem;
                 }
 
-            &:hover{
+            &:hover,
+            &.selected{
                 transition: .5s ease-in;
                 box-shadow: 2px 10px 10px rgb(1, 55, 68);  
                 background-color: $lightBlue;
@@ -293,6 +295,7 @@ header{
                 &:hover{
                     background-color: $DarkBlue;
                 }
+                
             }
         }
 }

@@ -216,6 +216,7 @@ header h1 {
   align-items: center;
   margin-top: 2%;
   border-radius: 5px;
+  cursor: pointer;
 }
 .medios-pago .box-pago .input-text-pago {
   display: flex;
@@ -229,7 +230,7 @@ header h1 {
 .medios-pago .box-pago p {
   font-size: 0.8rem;
 }
-.medios-pago .box-pago:hover {
+.medios-pago .box-pago:hover, .medios-pago .box-pago.selected {
   transition: 0.5s ease-in;
   box-shadow: 2px 10px 10px rgb(1, 55, 68);
   background-color: #b6ced4;

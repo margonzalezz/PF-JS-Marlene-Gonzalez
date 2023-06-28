@@ -1,4 +1,4 @@
-const reservas = JSON.parse(localStorage.getItem("misReservas")) || [];
+const reservas = JSON.parse(localStorage.getItem("misReservas"));
 let miReserva;
 const misPasajes = [];
 
