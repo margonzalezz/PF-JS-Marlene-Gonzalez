@@ -60,5 +60,6 @@ if (reservas && reservas.length > 0) {
       });
     }
     obtenerBotones(reserva);
+    location.href = "../pages/checkout.html";
   });
 }
