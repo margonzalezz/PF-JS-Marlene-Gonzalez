@@ -17,25 +17,27 @@ const aerolineas = [
 ];
 
 // --------------- EVENTOS ---------------
-const DateTime = luxon.DateTime;
+const DateTime = luxon.DateTime
+
 const botonIda = document.getElementById("botonIda");
 botonIda.addEventListener("click", () => {inputRegreso.disabled = true});
 
 const botonIdaVuelta = document.getElementById("botonIdaVuelta");
 botonIdaVuelta.addEventListener("click", () => {inputRegreso.disabled = false});
 
-const partida = document.getElementById("inputPartida");
-const regreso = document.getElementById("inputRegreso");
-partida.addEventListener("change", ()=> partida.min = ahora.value)
-regreso.addEventListener("change", ()=> partida.min = partida.value);
+const inputFechaPartida = document.getElementById("inputPartida"); 
+const inputFechaRegreso = document.getElementById("inputRegreso");
+const hoy = new Date();
+const fechaActual = hoy.toISOString().split("T")[0];
+
+inputFechaPartida.addEventListener("change", () => {inputFechaRegreso.min = inputFechaPartida.value});
+inputFechaPartida.min = fechaActual;
+inputFechaRegreso.min = inputFechaPartida;
 
 const reservas = [];
 const form = document.getElementById("containerViaje");
 let idPasajes = 1;
 const mensajeError = document.getElementById("errorOption");
-
-const ahora = DateTime.now();
-//const fechaHoy = new Date();
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -46,8 +48,6 @@ form.addEventListener("submit", (e) => {
   const inputRegreso = document.getElementById("inputRegreso").value;
   const fechaPartida = new Date(inputPartida);
   const fechaRegreso = new Date(inputRegreso);
-  // const fechaPartida = DateTime.fromISO(inputPartida);
-  // const fechaRegreso = DateTime.fromISO(inputRegreso);
 
   const errorCampos = () => {
     const isEmpty = (value) => value === "";
@@ -64,11 +64,6 @@ form.addEventListener("submit", (e) => {
     }
     return true;
   };
-
-
-
-
-
 
   const seguirSeleccion = errorCampos();
   if (seguirSeleccion) {

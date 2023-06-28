@@ -311,6 +311,17 @@ header{
 // FOOTER
 footer{
     background-color: $mainColor;
+    .box-footer{
+        ul{
+            li{
+                a{
+                    &:hover{
+                        color: $darkestBlue;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .accordion-header{

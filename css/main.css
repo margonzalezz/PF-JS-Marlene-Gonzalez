@@ -275,6 +275,9 @@ header h1 {
 footer {
   background-color: #69adbe;
 }
+footer .box-footer ul li a:hover {
+  color: #013744;
+}
 
 .accordion-header .accordion-drop {
   background-color: #69adbe;
