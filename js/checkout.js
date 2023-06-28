@@ -1,6 +1,7 @@
 const tipoEfectivo = document.getElementById("tipoEfectivo");
 const tipoTransferencia = document.getElementById("tipoTransfer");
 const tipoTarjetas = document.getElementById("tipoTarjetas");
+const botonComprar = document.getElementById("boton-de-compra");
 
 function seleccionarOpcionPago(opcionSeleccionada) {
     if (opcionSeleccionada !== tipoEfectivo) {
@@ -15,7 +16,7 @@ function seleccionarOpcionPago(opcionSeleccionada) {
     }
     opcionSeleccionada.classList.add("selected");
   }
-
+  
     tipoEfectivo.addEventListener("click", () => {seleccionarOpcionPago(tipoEfectivo)});
     tipoTransfer.addEventListener("click", () => {seleccionarOpcionPago(tipoTransfer)});
     tipoTarjetas.addEventListener("click", () => {seleccionarOpcionPago(tipoTarjetas)});
@@ -27,6 +28,8 @@ function seleccionarOpcionPago(opcionSeleccionada) {
             icon: 'success',
             title: 'Reservado con éxito',
             text: 'Su pasaje fue reservado correctamente',
+            showCancelButton: false,
+            confirmButtonText: "OK",
             footer: `
               <a href="documentacion.html">Hacé click acá para conocer la documentación importante</a>`
           })

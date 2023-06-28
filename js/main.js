@@ -19,7 +19,7 @@ const aerolineas = [
 // --------------- EVENTOS ---------------
 const DateTime = luxon.DateTime
   const botonIda = document.getElementById("botonIda");
-  botonIda.addEventListener("click", () => {inputRegreso.disabled = true});
+  botonIda.addEventListener("click", () => {inputRegreso.disabled = true;});
 
   const botonIdaVuelta = document.getElementById("botonIdaVuelta");
   botonIdaVuelta.addEventListener("click", () => {inputRegreso.disabled = false});

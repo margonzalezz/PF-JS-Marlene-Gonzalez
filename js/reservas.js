@@ -1,4 +1,4 @@
-const reservas = JSON.parse(localStorage.getItem("misReservas"));
+const vuelos = JSON.parse(localStorage.getItem("misReservas"));
 let miReserva;
 const misPasajes = [];
 
@@ -46,7 +46,7 @@ const createFlightCard = (reserva) => {
 };
 
 const contenedorVuelos = document.getElementById("containerPasajes");
-reservas.forEach(reserva => {
+vuelos.forEach(reserva => {
   const cardsPasajes = createFlightCard(reserva);
   contenedorVuelos.appendChild(cardsPasajes);
 });
