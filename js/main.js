@@ -21,17 +21,19 @@ const DateTime = luxon.DateTime;
 
 const botonIda = document.getElementById("botonIda");
 const botonIdaVuelta = document.getElementById("botonIdaVuelta");
+let isBotonSelected = false;
 
 botonIda.addEventListener("click", () => {
   botonIda.classList.add("seleccionado");
   botonIdaVuelta.classList.remove("seleccionado");
+  isBotonSelected = true;
 });
 
 botonIdaVuelta.addEventListener("click", () => {
   botonIdaVuelta.classList.add("seleccionado");
   botonIda.classList.remove("seleccionado");
+  isBotonSelected = true;
 });
-
 
   const inputFechaPartida = document.getElementById("inputPartida"); 
   const inputFechaRegreso = document.getElementById("inputRegreso");
@@ -57,7 +59,7 @@ form.addEventListener("submit", (e) => {
   const fechaRegreso = new Date(inputRegreso);
 
   const errorCampos = () => {
-    if (seleccionOrigen == "" || seleccionDestino == "" || inputPasajeros == "" || inputPartida == "") {
+    if (!isBotonSelected || seleccionOrigen == "" || seleccionDestino == "" || inputPasajeros == "" || inputPartida == "") {
       Swal.fire({
         icon: 'error',
         text: 'Por favor, complete todos los campos',
