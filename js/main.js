@@ -58,23 +58,15 @@ form.addEventListener("submit", (e) => {
   const fechaPartida = new Date(inputPartida);
   const fechaRegreso = new Date(inputRegreso);
 
-  const errorCampos = () => {
     if (!isBotonSelected || seleccionOrigen == "" || seleccionDestino == "" || inputPasajeros == "" || inputPartida == "") {
-      Swal.fire({
-        icon: 'error',
-        text: 'Por favor, complete todos los campos',
-        customClass: {
-          confirmButton:'boton-error' 
-        }
-      })
-      return false;
-    }
-    return true;
-  };
-  
-
-  const seguirSeleccion = errorCampos();
-    if (seguirSeleccion) {
+        Swal.fire({
+          icon: 'error',
+          text: 'Por favor, complete todos los campos',
+          customClass: {
+            confirmButton:'boton-error' 
+          }
+        })
+    } else {
       const aerolineasEncontradas = aerolineas.filter(aerolinea => aerolinea.habilitado.includes(Number(seleccionDestino)));
       aerolineasEncontradas.forEach(aerolinea => {
         const fechaInicial = DateTime.fromJSDate(fechaPartida);
@@ -102,5 +94,7 @@ form.addEventListener("submit", (e) => {
       });
       localStorage.setItem("misReservas", JSON.stringify(reservas));
       location.href = "pages/pasajes.html";
+
     }
-});
+  }
+);
