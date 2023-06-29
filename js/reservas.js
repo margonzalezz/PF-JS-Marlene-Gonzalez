@@ -9,7 +9,6 @@ const createFlightCard = (reserva) => {
 
   const gridPasajes = document.createElement("div");
   gridPasajes.id = "grid-pasajes";
-
   gridPasajes.innerHTML = `
     <div id="logoAerolinea" class="logo">
       <img src="${rutaImagen}" alt="${aerolinea}">
@@ -45,9 +44,9 @@ const createFlightCard = (reserva) => {
   return gridPasajes;
 };
 
-const contenedorVuelos = document.getElementById("containerPasajes");
-vuelos.forEach(reserva => {
-  const cardsPasajes = createFlightCard(reserva);
-  contenedorVuelos.appendChild(cardsPasajes);
-});
+    const contenedorVuelos = document.getElementById("containerPasajes");
+    vuelos.forEach(reserva => {
+      const cardsPasajes = createFlightCard(reserva);
+      contenedorVuelos.appendChild(cardsPasajes);
+    });
 

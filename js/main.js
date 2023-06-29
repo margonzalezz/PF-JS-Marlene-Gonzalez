@@ -27,12 +27,14 @@ const DateTime = luxon.DateTime;
     botonIda.classList.add("seleccionado");
     botonIdaVuelta.classList.remove("seleccionado");
     isBotonSelected = true;
+    inputRegreso.disabled = true;
   });
 
   botonIdaVuelta.addEventListener("click", () => {
     botonIdaVuelta.classList.add("seleccionado");
     botonIda.classList.remove("seleccionado");
     isBotonSelected = true;
+    inputRegreso.disabled = false;
   });
 
   function configuracionDeFechas() {
@@ -43,8 +45,6 @@ const DateTime = luxon.DateTime;
       inputFechaPartida.addEventListener("change", () => {inputFechaRegreso.min = inputFechaPartida.value});
       inputFechaPartida.min = fechaActual;
       inputFechaRegreso.min = inputFechaPartida;
-      inputPartida.addEventListener("input", () => {inputPartida.value = ''});
-      inputRegreso.addEventListener("input", () => {inputRegreso.value = ''});
   }
   configuracionDeFechas();
   
