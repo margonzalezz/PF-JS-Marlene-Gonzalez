@@ -18,42 +18,33 @@
                 display: flex;
                 justify-content: center;
 
-                    button{
-                        background-color: $DarkBlue;
-                        color: $white;
-                        border: none;
-                    }
-
                     .selectIda{
+                        width: 50%;
+                        display: flex;
+                        justify-content: space-around;
+                        margin-bottom: 8%;
+                        margin-top: 6%;
+
+                        button{
                             background-color: $DarkBlue;
-                            width: 50%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            border-right: $white;
-                            margin-right: 1%;
-                            border-radius: 5px;
-                            cursor: pointer;
-                            color:$white;
+                            color: $white;
+                            border: none;
+                            border-radius: 7px;
+                            padding: 3% 17%;
 
-                            input[type="radio" i] {
-                                 margin-right: 10px;
-                             }
-                        &:hover{
-                            background-color:$darkestBlue;
-
-                            button {
-                                &:hover{
-                                    background-color:$darkestBlue;
-                                }   
+                            &:hover,
+                            &.seleccionado{
+                                background-color:$darkestBlue;
+                            }   
                             }
+
                         }     
                     }
                     .select-idaYvuelta{
                         @extend .selectIda;
                     }
             }
-}
+
 
 
 .selectOrigen label::before{
@@ -310,6 +301,15 @@ header{
    .debit-content{
     margin-top: 3%;
    }
+
+
+.swal2-footer{
+    a{
+        color: $DarkBlue;
+        font-weight: bold;
+        text-align: center;
+    }
+}
 
 
 // FOOTER

@@ -24,15 +24,22 @@ function seleccionarOpcionPago(opcionSeleccionada) {
     function mostrarMensaje() {
     const comprar = document.getElementById("boton-de-compra");
     comprar.addEventListener("click", () => {
-        Swal.fire({
-            icon: 'success',
-            title: 'Reservado con éxito',
-            text: 'Su pasaje fue reservado correctamente',
-            showCancelButton: false,
-            confirmButtonText: "OK",
-            footer: `
-              <a href="documentacion.html">Hacé click acá para conocer la documentación importante</a>`
-          })
+        setTimeout(() => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Reservado con éxito',
+                text: 'Su pasaje fue reservado correctamente',
+                showCancelButton: false,
+                confirmButtonText: "Aceptar",
+                footer: `<a href="documentacion.html">Hacé click acá para conocer la documentación importante</a>`
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  location.href = '../index.html';
+                }
+              });
+        }, 1800);
+
     })
+
 }
 mostrarMensaje();

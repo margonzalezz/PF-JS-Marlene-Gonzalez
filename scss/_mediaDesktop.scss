@@ -101,7 +101,7 @@
         gap: 20px;
 
             .seleccionTipoPasaje{
-                margin-top: 7%;
+                margin-top: 6%;
                 display: flex;
                 align-items: center;
 
@@ -109,9 +109,12 @@
                  .selectIda{
                     align-items: center;
                     object-fit: cover;
-                    height: 6vh;
+                    height: vh;
                     font-weight: bold;
 
+                        button{
+                            font-weight: bold;
+                        }
                 }               
             }
 
@@ -167,7 +170,6 @@
         padding-left: 15%;
         padding-top: 5%;
         border-width: 2px;
-
       }
       
       #container-precio {

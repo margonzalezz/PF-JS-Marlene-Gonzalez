@@ -17,18 +17,26 @@ const aerolineas = [
 ];
 
 // --------------- EVENTOS ---------------
-const DateTime = luxon.DateTime
-  const botonIda = document.getElementById("botonIda");
-  botonIda.addEventListener("click", () => {inputRegreso.disabled = true;});
+const DateTime = luxon.DateTime;
 
-  const botonIdaVuelta = document.getElementById("botonIdaVuelta");
-  botonIdaVuelta.addEventListener("click", () => {inputRegreso.disabled = false});
+const botonIda = document.getElementById("botonIda");
+const botonIdaVuelta = document.getElementById("botonIdaVuelta");
+
+botonIda.addEventListener("click", () => {
+  botonIda.classList.add("seleccionado");
+  botonIdaVuelta.classList.remove("seleccionado");
+});
+
+botonIdaVuelta.addEventListener("click", () => {
+  botonIdaVuelta.classList.add("seleccionado");
+  botonIda.classList.remove("seleccionado");
+});
+
 
   const inputFechaPartida = document.getElementById("inputPartida"); 
   const inputFechaRegreso = document.getElementById("inputRegreso");
   const hoy = new Date();
   const fechaActual = hoy.toISOString().split("T")[0];
-
   inputFechaPartida.addEventListener("change", () => {inputFechaRegreso.min = inputFechaPartida.value});
   inputFechaPartida.min = fechaActual;
   inputFechaRegreso.min = inputFechaPartida;
@@ -49,14 +57,19 @@ form.addEventListener("submit", (e) => {
   const fechaRegreso = new Date(inputRegreso);
 
   const errorCampos = () => {
-   const isEmpty = (value) => value == "";
-    if ([botonIda.value, botonIdaVuelta.value, seleccionOrigen, seleccionDestino, inputPasajeros, inputPartida].some(isEmpty)) {
-          mensajeError.innerHTML = "Por favor, complete todos los campos";
-          mensajeError.className = "text-danger mt-2";
-          return false;
+    if (seleccionOrigen == "" || seleccionDestino == "" || inputPasajeros == "" || inputPartida == "") {
+      Swal.fire({
+        icon: 'error',
+        text: 'Por favor, complete todos los campos',
+        customClass: {
+          confirmButton:'boton-error' 
+        }
+      })
+      return false;
     }
     return true;
-  }
+  };
+  
 
   const seguirSeleccion = errorCampos();
     if (seguirSeleccion) {

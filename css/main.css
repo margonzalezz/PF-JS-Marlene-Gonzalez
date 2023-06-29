@@ -19,30 +19,21 @@
   display: flex;
   justify-content: center;
 }
-.selectViaje .seleccionTipoPasaje button {
+.selectViaje .seleccionTipoPasaje .selectIda, .selectViaje .seleccionTipoPasaje .select-idaYvuelta {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8%;
+  margin-top: 6%;
+}
+.selectViaje .seleccionTipoPasaje .selectIda button, .selectViaje .seleccionTipoPasaje .select-idaYvuelta button {
   background-color: #06657c;
   color: white;
   border: none;
+  border-radius: 7px;
+  padding: 3% 17%;
 }
-.selectViaje .seleccionTipoPasaje .selectIda, .selectViaje .seleccionTipoPasaje .select-idaYvuelta {
-  background-color: #06657c;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: white;
-  margin-right: 1%;
-  border-radius: 5px;
-  cursor: pointer;
-  color: white;
-}
-.selectViaje .seleccionTipoPasaje .selectIda input[type=radio i], .selectViaje .seleccionTipoPasaje .select-idaYvuelta input[type=radio i] {
-  margin-right: 10px;
-}
-.selectViaje .seleccionTipoPasaje .selectIda:hover, .selectViaje .seleccionTipoPasaje .select-idaYvuelta:hover {
-  background-color: #013744;
-}
-.selectViaje .seleccionTipoPasaje .selectIda:hover button:hover, .selectViaje .seleccionTipoPasaje .select-idaYvuelta:hover button:hover {
+.selectViaje .seleccionTipoPasaje .selectIda button:hover, .selectViaje .seleccionTipoPasaje .select-idaYvuelta button:hover, .selectViaje .seleccionTipoPasaje .selectIda button.seleccionado, .selectViaje .seleccionTipoPasaje .select-idaYvuelta button.seleccionado {
   background-color: #013744;
 }
 .selectOrigen label::before {
@@ -272,6 +263,12 @@ header h1 {
 
 .debit-content {
   margin-top: 3%;
+}
+
+.swal2-footer a {
+  color: #06657c;
+  font-weight: bold;
+  text-align: center;
 }
 
 footer {
@@ -550,14 +547,17 @@ nav {
     gap: 20px;
   }
   .selectViaje .seleccionTipoPasaje {
-    margin-top: 7%;
+    margin-top: 6%;
     display: flex;
     align-items: center;
   }
   .selectViaje .seleccionTipoPasaje .selectIda, .selectViaje .seleccionTipoPasaje .select-idaYvuelta {
     align-items: center;
     object-fit: cover;
-    height: 6vh;
+    height: vh;
+    font-weight: bold;
+  }
+  .selectViaje .seleccionTipoPasaje .selectIda button, .selectViaje .seleccionTipoPasaje .select-idaYvuelta button {
     font-weight: bold;
   }
   #grid-pasajes {
