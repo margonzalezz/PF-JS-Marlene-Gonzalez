@@ -1,0 +1,10 @@
+[
+  { "numero": 1, "lugar": "Buenos Aires, Argentina" },
+  { "numero": 2, "lugar": "New York, Estados Unidos" },
+  { "numero": 3, "lugar": "Venecia, Italia" },
+  { "numero": 4, "lugar": "Ibiza, España" },
+  { "numero": 5, "lugar": "Paris, Francia" },
+  { "numero": 6, "lugar": "Mykonos, Grecia" },
+  { "numero": 7, "lugar": "Bariloche, Argentina" },
+  { "numero": 8, "lugar": "Cataratas de Iguazú, Argentina" }
+]
