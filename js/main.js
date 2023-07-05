@@ -1,20 +1,9 @@
 // --------------- ARRAYS ---------------
-const lugares = [
-  { numero: 1, lugar: "Buenos Aires, Argentina" },
-  { numero: 2, lugar: "New York, Estados Unidos" },
-  { numero: 3, lugar: "Venecia, Italia" },
-  { numero: 4, lugar: "Ibiza, España" },
-  { numero: 5, lugar: "Paris, Francia" },
-  { numero: 6, lugar: "Mykonos, Grecia" },
-  { numero: 7, lugar: "Bariloche, Argentina" },
-  { numero: 8, lugar: "Cataratas de Iguazú, Argentina" }
-];
+const URLugares = "db-json/dbDestinos.JSON"
+const lugares = [];
 
-const aerolineas = [
-  { aerolinea: "Aerolíneas Argentinas", precio: 250000, habilitado: [1, 2, 3, 4, 7, 8] },
-  { aerolinea: "Iberia Airlines", precio: 280000, habilitado: [1, 2, 3, 4, 5, 6, 7, 8] },
-  { aerolinea: "American Airlines", precio: 305000, habilitado: [1, 2, 3, 5, 6, 7, 8] }
-];
+const URLAerolineas = "db-json/dbAerolineas.JSON"
+const aerolineas = [];
 
 // --------------- EVENTOS ---------------
 const DateTime = luxon.DateTime;
@@ -102,3 +91,17 @@ form.addEventListener("submit", (e) => {
       }
     }
 );
+
+function obtenerLugares() {
+  fetch(URLugares)
+  .then((respuesta)=> respuesta.json())
+  .then((data)=> lugares.push(...data))
+}
+obtenerLugares()
+
+function obtenerAerolineas() {
+  fetch(URLAerolineas)
+  .then((response)=> response.json())
+  .then((datos)=> aerolineas.push(...datos))
+}
+obtenerAerolineas();

@@ -20,9 +20,9 @@ const createFlightCard = (reserva) => {
     </div>
     <div id="seccion-idaYvuelta" class="vuelta">
       <p class="titulo-vuelta">DESTINO:<br>${destino}</p>
-      ${pasaje === "solo_ida" ? '' : `<p class="fecha-vuelta">${regreso}</p>`}
+      ${pasaje === "solo_ida" ? '0' : `<p class="fecha-vuelta">${regreso}</p>`}
     </div>
-    ${pasaje === "solo_ida" ? '' : `<div id="container-dias" class="dias"><p>${diasViaje} días</p></div>`}
+    ${pasaje === "solo_ida" ? '0' : `<div id="container-dias" class="dias"><p>${diasViaje} días</p></div>`}
     <div id="container-precio" class="precio">
       <div class="precio-pasaje">
         <span class="titulo">PRECIO</span>
