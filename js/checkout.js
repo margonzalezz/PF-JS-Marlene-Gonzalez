@@ -37,7 +37,7 @@ function seleccionarOpcionPago(opcionSeleccionada) {
                   location.href = '../index.html';
                 }
               });
-        }, 1800);
+        }, 1500);
 
     })
 
